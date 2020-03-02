@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Tufts Adventure Tours</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"> -->
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="fonts.css">
+<style>
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: Arial, Helvetica, sans-serif
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .w3-half img {
+    margin-bottom: -6px;
+    margin-top: 16px;
+    opacity: 0.8;
+    cursor: pointer
+  }
+
+  .w3-half img:hover {
+    opacity: 1
+  }
+</style>
+
+<body>
+
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;"
+    id="mySidebar"><br>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+      style="width:100%;font-size:22px">Close Menu</a>
+    <div class="w3-container">
+      <h3 class="w3-padding-64"><b>Tufts <br> Adventure <br> Tours</b></h3>
+    </div>
+    <div class="w3-bar-block">
+      <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+      <!-- <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Showcase</a> -->
+      <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About</a>
+      <a href="#location" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Location</a>
+      <a href="#upcomingTours" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Upcoming Tours</a>
+      <a href="#sveinsStory" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Svein's Story</a>
+      <a href="#bikesForRental" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Bikes for Rent</a>
+      <a href="#guides" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Our Guides</a>
+      <a href="#proconsultation" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow">Professional
+        Consultation</a>
+    </div>
+  </nav>
+
+  <!-- Top menu on small screens -->
+  <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+    <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+    <span>Tufts Adventure Tours</span>
+  </header>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+    id="myOverlay"></div>
+
+  <!-- !PAGE CONTENT! -->
+
+  <div class="imageBox">
+    <img class="HomeImage" src="images/SveinBikeMountain.jpeg" alt="Gravel Cycling">
+    <!-- <h1 class="imageText">Gravel Bike Tours in Andorra by Svein Tuft</h1> -->
+  </div>
+
+  <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+    <!-- Header -->
+    <div class="w3-container" style="margin-top:80px" id="showcase">
+      <!-- <h1 class="w3-jumbo"><b>Interior Design</b></h1> -->
+      <!-- <hr style="width:50px;border:5px solid red" class="w3-round"> -->
+    </div>
+
+    <!-- Photo grid (modal) -->
+    <!-- <div class="w3-row-padding">
+      <div class="w3-half">
+        <img src="/w3images/kitchenconcrete.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+        <img src="/w3images/livingroom.jpg" style="width:100%" onclick="onClick(this)"
+          alt="Light, white and tight scandinavian design">
+        <img src="/w3images/diningroom.jpg" style="width:100%" onclick="onClick(this)"
+          alt="White walls with designer chairs">
+      </div>
+
+      <div class="w3-half">
+        <img src="/w3images/atrium.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
+        <img src="/w3images/bedroom.jpg" style="width:100%" onclick="onClick(this)"
+          alt="Bedroom and office in one space">
+        <img src="/w3images/livingroom2.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
+      </div>
+    </div> -->
+
+    <!-- Modal for full size images on click -->
+    <!-- <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption"></p>
+      </div>
+    </div> -->
+
+    <!-- Home / Tufts Adventure Tours -->
+    <div class="w3-container" id="about" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Gravel Bike Touring in Andorra</b></h1>
+      <hr style="width:50px;border:5px solid #333" class="w3-round">
+      <p><b>Come and explore Andorra and its surrounding areas by Gravel Bike. Guides with local knowledge and unique
+          experience take you off the beaten track to explore the natural playground that is Andorra. Exert yourself and
+          be rewarded with the beauty of the landscape here. We offer bike rental, tour guides and self-catering
+          apartments with great amenities in an ideal location at our base here in Andorra.
+          <br><br>
+          Go on single or multi-day Gravel Bike Tour Guides tailored to each group's preference. Tufts Adventure Tours
+          will leave you with memories for life and can cater to your ideal time here. Our guides capatilise on their
+          local knowledge of trails and routes with you. You have the freedom to ride whatever type of route you dream
+          of
+          with whatever equipment needed.
+          <br><br>
+          As a new company, we are delighted to work with you and cater to your requirements and ideal time here.
+          Regarding accommodation, we have self-catering apartments and also partner with local hotels, offering
+          everything from 5 star hotel treatment, to supply and help with equipment necessary to enjoy a camping setup
+          on
+          a multi-day bike trip.
+          <br><br>
+          With excellent bikes for gravel, road and mountain bike from Scott and Brodie, we have all bases covered. All
+          you need to bring is yourself, friends and family.
+          While our website is developed further, get in touch with Svein@tuftsadventuretours.com to organise your
+          visit.
+          <br><br></b>
+        Until then,<br>
+        Svein Tuft, Tufts Adventure Tours.
+      </p>
+    </div>
+
+
+    <!-- Services -->
+    <!-- <div class="w3-container" id="services" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Location.</b></h1>
+      <hr style="width:50px;border:5px solid #333" class="w3-round">
+      <p>Andorra and neighboring France and Spain in the Pyrenees are renowned for many things. For hiking, skiing, it's
+        high altitude, it's beautiful mountains. Andorra's hidden gems of gravel roads have largely been kept a
+        secret...<br><br>
+
+        The home of many a pro cyclist and athlete, it is a playground for bike riding with endless roads twisting up
+        and down, gravel roads across mountains and valleys and everything to test the most technically able mountain
+        bikers.<br><br>
+
+
+        The type of bike ride possible here:
+        “If starting from Andorra La vella, make your way up to La Massana. From there climb up to the CG4 direction
+        Pal. Take the CG4 all the way to Port de Cabus. From La Vella it’s roughly 1300 m of climbing. At the summit the
+        road turns to Gravel and becomes the Carretera de Tor. Big descent passing Tor and Noris and finally coming back
+        on pavement in Alins. From there take a left on the L-510 down the valley to the L-504 junction, taking a right
+        on L-504 heading north to Tavascan. From Tavascan take the Cami de Graus through Quanca. This is a nice gravel
+        road and climbing roughly 700 m until the road ends and then turns to single track/trail. There’s some good
+        riding and some hiking until the pass at 2100 m. Now you are in France. Some steep technical hiking downhill and
+        some great technical descending sections. The route finally washes out on a small D road in the Ossese valley
+        and turns into the D38. Descend until you come to the D8f. Take the D8f until the D18 junction and turn right.
+        This takes you to the town of Vicdessos. Follow signs to Auzat. From Auzat take the D8 up the Soulcem valley. A
+        massive climb awaits. After Soulcem lake the road turns to gravel and you keep climbing deep into the big
+        mountains. As the gravel road comes to an end there is a small trail on the left heading up to the Port de Rat.
+        From here about an hour of hike and bike to the 2500m pass. Then the trail drops steeply down into Andorra
+        Arcalis ski area. The road is gravel at 1st and then become paved as you get closer to the ski station. Take the
+        CS-380 until Ordino and now you descend all the way back to La vella. The route could be done in one very
+        massive day but I recommend taking 2 days to really enjoy it.”</p>
+    </div> -->
+
+    <!-- Designers -->
+    <!-- <div class="w3-container" id="designers" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Designers.</b></h1>
+      <hr style="width:50px;border:5px solid #333" class="w3-round">
+      <p>The best team in the world.</p>
+      <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure
+        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing
+        elit, sed do eiusmod tempor
+        incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <p><b>Our designers are thoughtfully chosen</b>:</p>
+    </div> -->
+
+    <div class="w3-container" id="location" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Location</b></h1>
+      <hr style="width:50px;border:5px solid #333" class="w3-round">
+
+      <p>
+        Andorra and neighboring France and Spain in the Pyrenees are renowned for many things. For hiking, skiing, it's
+        high altitude, it's beautiful mountains. Andorra's hidden gems of gravel roads have largely been kept a
+        secret...<br><br>
+
+        The home of many a pro cyclist and athlete, it is a playground for bike riding with endless roads twisting up
+        and down, gravel roads across mountains and valleys and everything to test the most technically able mountain
+        bikers.<br><br>
+
+        While our base is in Andorra, we occasionally run tours elsewhere such as our Spring 2020 camps in the Garrotxa
+        Mountains between Girona and Andorra.<br><br>
+      </p>
+
+      <iframe width="800" height="500" src="https://www.youtube.com/embed/aKTC8yFddb4" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <!-- HERE WE ADD ABOUT THE BIKES!!! -->
+
+    <!-- The Team -->
+    <!-- <div class="w3-row-padding w3-grayscale">
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+          <img src="/w3images/team2.jpg" alt="John" style="width:100%">
+          <div class="w3-container">
+            <h3>John Doe</h3>
+            <p class="w3-opacity">CEO & Founder</p>
+            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+          <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+          <div class="w3-container">
+            <h3>Jane Doe</h3>
+            <p class="w3-opacity">Designer</p>
+            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+          <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
+          <div class="w3-container">
+            <h3>Mike Ross</h3>
+            <p class="w3-opacity">Architect</p>
+            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Packages / Pricing Tables -->
+    <div class="w3-container" id="upcomingTours" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Upcoming Tours</b></h1>
+      <hr style="width:50px;border:5px solid #333" class="w3-round">
+      <p> Come join us in the high Garrotxa North of Girona for 6 days of gravel specific training. This will be the 1st
+        edition of spring training camps with Tufts adventure Tours. The terrain is wild and difficult each day is
+        guaranteed to be epic.<br><br>
+        The idea of these camps is to push your boundaries and step out of the comfort zone a bit
+        to prepare you for the upcoming season, whether that is on the road or gravel/adventure racing.
+        There will be 3 guides and 3 different levels to help everyone achieve their goals.<br><br>
+
+        The camp will be based out of a beautiful old catalan farm house with all the amenities. We will have a Chef,
+        soigneurs and mechanic to make sure everyone
+        has a great experience and all your needs are taken care of, so you can focus on the big days of
+        training.<br><br> We
+        are going to have evening chats discussing how to prepare for your events covering topics such as lifestyle,
+        nutrition, training load and a number of other protocols. Sit down with Svein Tuft and pick his brain and learn
+        some of the tactics that allowed him to thrive in the world tour until the age of 42. Learn from renowned
+        adventure racer and head guide David Rovira how to tackle multi day adventure races.<br><br>
+
+        There's a wealth of knowledge in these 2 veterans of endurance sport and our aim is to help you bypass a lot of
+        the typical hurdles
+        many come across in the early years of taking on big challenges such as dirty Kanza or Trans alps. It will be an
+        amazing 6 days learning together in one of the most beautiful places on the planet. We look forward to meeting
+        you.<br><br><br></p>
+    </div>
+
+
+
+
+    <!-- <div class="w3-row-padding">
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-light-grey w3-center">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+          <li class="w3-padding-16">Floorplanning</li>
+          <li class="w3-padding-16">10 hours support</li>
+          <li class="w3-padding-16">Photography</li>
+          <li class="w3-padding-16">20% furniture discount</li>
+          <li class="w3-padding-16">Good deals</li>
+          <li class="w3-padding-16">
+            <h2>$ 199</h2>
+            <span class="w3-opacity">per room</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div> -->
+
+    <div class="w3-row-padding">
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-light-grey w3-center">
+          <li class="w3-green w3-xlarge w3-padding-32">30 March - 4 April 2020</li>
+          <li class="w3-padding-16">5 day training camp on gravel roads</li>
+          <li class="w3-padding-16">Location: Garrotxa Mountains, Catalonia, Spain</li>
+          <li class="w3-padding-16">Gravel Bike Hire Available</li>
+          <li class="w3-padding-16">Based out of a beautiful, old, Catalan Farmhouse</li>
+          <li class="w3-padding-16">Talks on Training, Nutrition & much more</li>
+          <li class="w3-padding-16">Chef, Soigneur & Mechanic on board</li>
+          <li class="w3-padding-16">Finish in nearby Girona with a meal.</li>
+          <!-- <li class="w3-padding-16">Good deals</li> -->
+          <!-- <li class="w3-padding-16">
+              <h2>$ 199</h2>
+              <span class="w3-opacity">per room</span>
+            </li> -->
+          <li class="w3-light-grey w3-padding-24">
+            <a href="https://www.experienciarural.cat/en/houses/64-serra-del-bosc"><button
+                class="w3-button w3-white w3-padding-large w3-hover-black">See Camp House</button></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-half">
+        <ul class="w3-ul w3-light-grey w3-center">
+          <li class="w3-green w3-xlarge w3-padding-32">21 - 27 April 2020</li>
+          <li class="w3-padding-16">5 day training camp on gravel roads</li>
+          <li class="w3-padding-16">Location: Garrotxa Mountains, Catalonia, Spain</li>
+          <li class="w3-padding-16">Gravel Bike Hire Available</li>
+          <li class="w3-padding-16">Based out of a beautiful, old, Catalan Farmhouse</li>
+          <li class="w3-padding-16">Talks on Training, Nutrition & much more</li>
+          <li class="w3-padding-16">Chef, Soigneurs & Mechanic on board</li>
+          <li class="w3-padding-16">Finish in nearby Girona with a meal.</li>
+
+          <!-- <li class="w3-padding-16">GREAT deals</li> -->
+          <!-- <li class="w3-padding-16">
+            <h2>$ 249</h2>
+            <span class="w3-opacity">per room</span>
+          </li> -->
+          <li class="w3-light-grey w3-padding-24">
+            <a href="https://www.somrurals.com//es/casa-rural/sr-613-girons-613"><button
+                class="w3-button w3-white w3-padding-large w3-hover-black">See Camp House</button></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <div class="w3-container" id="sveinsStory" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Svein's Story</b></h1>
+      <hr style="width:50px;border:5px solid #333" class="w3-round">
+      <p><i>
+          "More than 20 years ago I was exploring by bike as a young man in
+          Northern Canada, Yukon and Alaska. In a strange turn of events this led
+          me to my profession of 20 years in the pro peleton. I was riding gravel
+          before it was cool.
+          <br><br>
+          In those days it was what you had to do to get up
+          North. I loved it then but I love it more now. The bikes and technology
+          have been a big factor in that. It’s amazing what kind of terrain you
+          can travel in one day on a modern gravel bike.
+          <br><br>
+          <img src="images/SveinoAndDog.jpeg" alt="Bike, Svein, Dog">
+          <br><br>
+          The thing I love the most
+          now, is to see people out in the mountains seeing what I get to see on a
+          daily basis. The smiles on their faces after a very difficult,
+          beautiful, epic day is what motivates me these days.
+          <br> <br>
+          I want our guests
+          to have an experience of a lifetime and I want them to return the next
+          year or next month!"</i><br><br>
+        - Svein Tuft, Tufts Adventure Tours Founder.<br><br></p>
+
+
+      <iframe width="800" height="500" src="https://www.youtube.com/embed/nCKa3x4xXtg" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="w3-container" id="bikesForRental" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Bikes for Rent</b></h1>
+      <hr style="width:50px;border:5px solid #333" class="w3-round">
+      <img src="images/TheBike.jpg" alt="Gravel Bike">
+      <p><br><br>
+        At Tuft's Adventure Tours our aim is to give you the ultimate adventure experience on your visit to
+        Andorra. We will be riding in the most beautiful parts of the high pyrenees, of Andorra, Spain and
+        France and the terrain is very rugged. Which is why equipment really matters.
+        <br>
+        <br>
+        With our fleet of
+        rental bikes, provided by <a
+          href="https://www.scott-sports.com/global/en/products/bike-bikes-road-gravel-cx">Scott</a> and <a
+          href="https://www.brodiebicycles.com/">Brodie</a> you will be riding the best quality gravel bikes on the
+        market. This will allow you to focus on the route at hand and soak up all of the surrounding beauty
+        without stressing whether your bike is going to make it through the rest of your journey.
+
+        <br><br>
+        Further specification will be available here soon.
+        Until then, feel free to contact us with any questions that you may have.
+      </p>
+    </div>
+
+    <div class="w3-container" id="guides" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Meet your Guides</b></h1>
+      <hr style="width:50px;border:5px solid #333" class="w3-round">
+      
+        <h3>Ricard Calmet</h3>
+        <p>
+        Richard has always been passionate about outdoors and sport.
+        He started racing Motocross and Enduro in his early years finishing 3rd in the Spanish Championships before
+        moving on to mountaineering and climbing. <br> For over a decade Richard was climbing some of the most iconic
+        routes in the Alps and visiting some other climbing meccas around the world (South Africa, USA, Mali, Morocco,
+        Thailand, Jordan, Turquey, Greece, etc)<br>
+        This is how he discovered his love for travelling and getting to know new places and people.
+        After moving onto become an avid mountainbiker and Xterra triathlete with resuls in races such as:
+      </p>
+      <ul>
+        <li>Xterra World Champs</li>
+        <li>French Winter Triathlon Champs (1st)</li>
+        <li> MTB World Cup Germany</li>
+        <li>MTB Spanish Champs, Master 40 (1st)</li>
+        <li>MTB Ultramarathon Championships Master 40 (1st)</li>
+        <li>MTB World Championships Masters (2nd)</li>
+      </ul>
+<p>
+    
+        Cycled around the world for 3 years (2014-2017), 55.000km, 42 countries that is at present time the biggest and
+        most amazing experience I ever did in my lifetime.
+        Professional firefighter in my home town I enjoy my life being in the wild, practicing sports, photography,
+        travelling and living a healthy lifestyle
+        With fleucny in French, Italian, English and German, Richard can show you the most incredible parts of Andorra.
+     </p>
+      <br>
+      <img src="images/guides.jpeg"> 
+      <br>
+      <br>
+      <h3>David Rovira Roqueta</h3>
+     <p>
+
+        David has much life experience. A graduate of Georgraphy from Universitat Autònoma de Barcelona, Post-graduate
+        of Urban planning from Università degli studi di Venezia, with courses completed in Mountain rescue skills,
+        Avalanche, First aid and DEA course.
+        David has spent time working in the catalan Firefighter Service, in Mossos d’Esquadra (Catalan police Dept.) and
+        in the Mossos d'd’Esquadra mountain team. With Catalan, Spanish, Italian, French, Portuguese and English, David
+        looks forward to meeting you.
+        <br><br>
+        Adventure Races:
+        </p>
+        <ul>
+          <li>
+            1st Raiverd 1999 (1st AR in Spain)
+          </li>
+          <li>
+            5th AR World Championship Discovery cannel. Switzerland.2001
+          </li>
+          <li>
+            6th Raid Gauloises Vietnam 2002
+          </li>
+          <li>
+            Ecochallenge Fiji 2002. Special prize best biker and runner team.
+          </li>
+          <li>
+            2003 2d in AR European Championship, Raid Bimbache. El Hierro
+          </li>
+          <li>
+            4th Raid Gauloises Kirguistan 2003
+          </li>
+          <li>
+            1st ARWS raid Bimbache (world series) 2007. Andalucía
+          </li>
+          <li>
+            Primal Quest Lake Tahoe /Primal Quest Moab
+          </li>
+          <li>
+            1st Ecomotion Brasil (AR world series) 2005
+          </li>
+          <li>
+            4th Explore Sweden (AR world series) 2005
+          </li>
+          <li>
+            5th Explore Sweden (AR world series) 2004
+          </li>
+          <li>
+            5th Explore Sweden (AR world series) 2004
+          </li>
+          <li>
+            2nd Raid Extreme Hidalgo. México. 2003
+          </li>
+          <li>
+            AR Spanish Champion 2001, 2007, 2008
+          </li>
+          <li>
+            <u>Other races of notes include:</u> Bull of Africa (South Africa), AR world champs New Zealand, 3x
+            Ecomotion Brasil,3x EAH Mexico,
+            Endurance Quest Finland.
+          </li>
+        </ul>
+        <br>
+        <br>
+        Cycling:
+        <ul>
+          <li>
+            1st Transpyr MTB stages race, 2012
+          </li>
+          <li>
+            Cape Epic 2011, 2012 (top 30), 2013, 2015
+          </li>
+          <li>
+            Titan Desert 2011, 2012, 2013, 2014, 2016. Master pódiums and top 15 overall
+          </li>
+          <li>
+            Breck epic Colorado 2015. 4th master
+          </li>
+          <li>
+            Mongolia Bike Challenge. 8th overall
+          </li>
+          <li>
+            Trans Andes Xile. 1st master
+          </li>
+          <li>
+            Bikepacking and cycling in; New Zealand, Sicily, Dolomites, Colorado trail, Idaho, Pyrenees full traverse 3
+            times, Yorkshire, Walles, Australia, California, Franch and italian Alps.
+            David has also raced in road cycling, duathlon (podiums in the catalan championship), mountaneering ski
+            (podium in
+            the catalan championship), orienteering, running races and more.
+          </li>
+          <li>
+            <u>Ski traverses</u> in La Meije (french Alps) Argentina, Vale d’Aosta, Aletschhorn glacier full
+            traverse (Switzerland) Sellaronda (Dolomites), Swedish Lapland and Pyrenees.
+          </li>
+        </ul>
+    </div>
+
+    <div class="w3-container" id="proconsultation" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Professional Consultation</b></h1>
+      <hr style="width:50px;border:5px solid #333" class="w3-round">
+
+      <img src="images/CanadianChamp.jpeg">
+      <p><br>
+        Svein Tuft is offering a professional consultation service for Elite and Professional riders.
+        After a storied professional road racing career, reaching the highest spheres of accomplishment in the world of
+        cycling - in grand tours, the classics, Olympics and World Championships - all the while maintaining a grounded
+        perspective and understanding of how to drive athletic performance as a bike rider to it's peak while remaining
+        balanced as a person.
+        <br><br>
+        Feel free to reach out to Svein@tuftsadventuretours.com to discuss how we can work together.<br><br><br>
+      </p>
+    </div>
+
+    <!-- <div class="w3-container" id="guides" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Meet your Guides</b></h1>
+      <hr style="width:50px;border:5px solid #333" class="w3-round">
+      <p>
+        <h3>Ricard Calmet</h3>
+        Richard has always been passionate about outdoors and sport.
+        Richard started racing Motocross and Enduro in his early years finishing 3rd in the Spanish Championships before
+        moved to mountaineering and climbing later. <br> For over a decade Richard was climbing some of the most iconic
+        routes in the Alps and visiting some other climbing meccas around the world (South Africa, USA, Mali, Morocco,
+        Thailand, Jordan, Turquey, Greece, etc)<br>
+        This is how he discovered his love for travelling and getting to know new places and people.
+        After moving onto become an avid mountainbiker and Xterra triathlete with resuls in races such as:
+      </p>
+      <ul>
+        <li>Xterra World Champs</li>
+        <li>French Winter Triathlon Champs (1st)</li>
+        <li> MTB World Cup Germany</li>
+        <li>MTB Spanish Champs, Master 40 (1st)</li>
+        <li>MTB Ultramarathon Championships Master 40 (1st)</li>
+        <li>MTB World Championships Masters (2nd)</li>
+      </ul>
+
+      <p>
+        Cycled around the world for 3 years (2014-2017), 55.000km, 42 countries that is at present time the biggest and
+        most amazing experience I ever did in my lifetime.
+        Professional firefighter in my home town I enjoy my life being in the wild, practicing sports, photography,
+        travelling and living a healthy lifestyle
+        With fleucny in French, Italian, English and German, Richard can show you the most incredible parts of Andorra.
+      </p>
+      <br>
+      <br>
+      <h3>David Rovira Roqueta</h3>
+      <p>
+
+        David has much life experience. A graduate of Georgraphy from Universitat Autònoma de Barcelona, Post-graduate
+        of Urban planning from Università degli studi di Venezia, with courses completed in Mountain rescue skills,
+        Avalanche, First aid and DEA course.
+        David has spent time working in the catalan Firefighter Service, in Mossos d’Esquadra (Catalan police Dept.) and
+        in the Mossos d'd’Esquadra mountain team. With Catalan, Spanish, Italian, French, Portuguese and English, David
+        looks forward to meeting you.
+        <br><br>
+        Adventure Races:
+        <ul>
+          <li>
+            1st Raiverd 1999 (1st AR in Spain)
+          </li>
+          <li>
+            5th AR World Championship Discovery cannel. Switzerland.2001
+          </li>
+          <li>
+            6th Raid Gauloises Vietnam 2002
+          </li>
+          <li>
+            Ecochallenge Fiji 2002. Special prize best biker and runner team.
+          </li>
+          <li>
+            2003 2d in AR European Championship, Raid Bimbache. El Hierro
+          </li>
+          <li>
+            4th Raid Gauloises Kirguistan 2003
+          </li>
+          <li>
+            1st ARWS raid Bimbache (world series) 2007. Andalucía
+          </li>
+          <li>
+            Primal Quest Lake Tahoe /Primal Quest Moab
+          </li>
+          <li>
+            1st Ecomotion Brasil (AR world series) 2005
+          </li>
+          <li>
+            4th Explore Sweden (AR world series) 2005
+          </li>
+          <li>
+            5th Explore Sweden (AR world series) 2004
+          </li>
+          <li>
+            5th Explore Sweden (AR world series) 2004
+          </li>
+          <li>
+            2nd Raid Extreme Hidalgo. México. 2003
+          </li>
+          <li>
+            AR Spanish Champion 2001, 2007, 2008
+          </li>
+          <li>
+            <u>Other races of notes include:</u> Bull of Africa (South Africa), AR world champs New Zealand, 3x
+            Ecomotion Brasil,3x EAH Mexico,
+            Endurance Quest Finland.
+          </li>
+        </ul>
+        <br>
+        <br>
+        Cycling:
+        <ul>
+          <li>
+            1st Transpyr MTB stages race, 2012
+          </li>
+          <li>
+            Cape Epic 2011, 2012 (top 30), 2013, 2015
+          </li>
+          <li>
+            Titan Desert 2011, 2012, 2013, 2014, 2016. Master pódiums and top 15 overall
+          </li>
+          <li>
+            Breck epic Colorado 2015. 4th master
+          </li>
+          <li>
+            Mongolia Bike Challenge. 8th overall
+          </li>
+          <li>
+            Trans Andes Xile. 1st master
+          </li>
+          <li>
+            Bikepacking and cycling in; New Zealand, Sicily, Dolomites, Colorado trail, Idaho, Pyrenees full traverse 3
+            times, Yorkshire, Walles, Australia, California, Franch and italian Alps.
+            David has also raced in road cycling, duathlon (podiums in the catalan championship), mountaneering ski
+            (podium in
+            the catalan championship), orienteering, running races and more.
+          </li>
+          <li>
+            <u>Ski traverses</u> in La Meije (french Alps) Argentina, Vale d’Aosta, Aletschhorn glacier full
+            traverse (Switzerland) Sellaronda (Dolomites), Swedish Lapland and Pyrenees.
+          </li>
+        </ul>
+      </p> 
+    </div> -->
+
+
+    <!-- Contact -->
+    <!-- <div class="w3-container" id="contact" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+      <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new
+        people!</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-section">
+          <label>Name</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div>
+        <div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input w3-border" type="text" name="Email" required>
+        </div>
+        <div class="w3-section">
+          <label>Message</label>
+          <input class="w3-input w3-border" type="text" name="Message" required>
+        </div>
+        <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
+      </form>
+    </div> -->
+
+    <!-- End page content -->
+  </div>
+
+  <!-- W3.CSS Container -->
+  <!-- <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"> -->
+  <!-- <p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+        class="w3-hover-opacity"></a></p> -->
+
+
+  <footer>
+    <p>
+      Contact: Svein@tuftsadventuretours.com
+    </p>
+
+    <p><a class="instagramLogoText" href="https://www.instagram.com/tufts_adventure_tours/">Follow us on Instagram</a>
+    </p>
+
+    <p>
+      &copy; Tufts Adventure Tours Andorra 2020
+    </p>
+  </footer>
+
+  <!-- </div> -->
+
+  <script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+  </script>
+
+</body>
+
+</html>
