@@ -1,3 +1,22 @@
+<?php
+
+if($_POST["submit"]) {
+    $recipient="your@email.address";
+    $subject="Form to email message";
+    $sender=$_POST["sender"];
+    $senderEmail=$_POST["senderEmail"];
+    $message=$_POST["message"];
+
+    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+
+    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
+
+    $thankYou="<p>Thank you! Your message has been sent.</p>";
+}
+?>
+
+<!-- The above taken from: https://htmldog.com/techniques/formtoemail/ -->
+
 <!DOCTYPE html>
 <html lang="en">
 <title>Tufts Adventure Tours</title>
@@ -707,12 +726,11 @@
 
 
     <!-- Contact -->
-    <!-- <div class="w3-container" id="contact" style="margin-top:75px">
-      <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
+    <div class="w3-container" id="contact" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Build Your Tour</b></h1>
       <hr style="width:50px;border:5px solid red" class="w3-round">
-      <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new
-        people!</p>
-      <form action="/action_page.php" target="_blank">
+      <p>Let us know how we can bring your dream tour into existence.</p>
+      <form method="post" action="contact.php" target="_blank">
         <div class="w3-section">
           <label>Name</label>
           <input class="w3-input w3-border" type="text" name="Name" required>
@@ -727,7 +745,7 @@
         </div>
         <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
       </form>
-    </div> -->
+    </div>
 
     <!-- End page content -->
   </div>
@@ -738,11 +756,13 @@
         class="w3-hover-opacity"></a></p> -->
 
          <!-- Contact -->
+
+         <!-- Watch https://www.youtube.com/watch?v=eg4e-FObyJ8 to finish this form -->
   <div class="w3-container" id="contact" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
-    <form action="/action_page.php" target="_blank">
+    <form action="index.php" target="_blank">
       <div class="w3-section">
         <label>Name</label>
         <input class="w3-input w3-border" type="text" name="Name" required>
