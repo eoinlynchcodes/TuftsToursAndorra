@@ -1,28 +1,10 @@
-<?php
-
-if($_POST["submit"]) {
-    $recipient="your@email.address";
-    $subject="Form to email message";
-    $sender=$_POST["sender"];
-    $senderEmail=$_POST["senderEmail"];
-    $message=$_POST["message"];
-
-    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
-
-    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
-
-    $thankYou="<p>Thank you! Your message has been sent.</p>";
-}
-?>
-
-<!-- The above taken from: https://htmldog.com/techniques/formtoemail/ -->
-
 <!DOCTYPE html>
 <html lang="en">
 <title>Tufts Adventure Tours</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="formHandler.js"></script>
+<scrpit src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" />
+<script src="main.js"></script>
 <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"> -->
 <link rel="stylesheet" href="index.css">
@@ -74,6 +56,8 @@ if($_POST["submit"]) {
       <a href="#guides" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Our Guides</a>
       <a href="#proconsultation" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow">Professional
         Consultation</a>
+      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Tour Builder</a>
+
     </div>
   </nav>
 
@@ -417,7 +401,7 @@ if($_POST["submit"]) {
         <h3><u>Scott Addict Gravel 20</u></h3>
         <img src="images/scottgraveladdict20.jpg">
         <p>Key Features:</p>
-        <ul> 
+        <ul>
           <li>Addict Gravel Disc HMF Carbon Frame</li>
           <li>Shimano GRX RX810 Disc 22 Speed</li>
           <li>Syncros RP2.0 Disc Wheels</li>
@@ -425,11 +409,12 @@ if($_POST["submit"]) {
         </ul>
         <p>
           <i>"The SCOTT Addict Gravel 20 has been set up to allow you to ride any road, anywhere and in any weather
-          conditions. A lightweight HMF Carbon fiber frame, Syncros components, some rugged Schwalbe G-One tires and
-          Shimano Hydraulic disc brakes give you a rig that will let you get your adventure on, no matter what. Find
-          yourself, get lost."</i> - Scott Bikes.
+            conditions. A lightweight HMF Carbon fiber frame, Syncros components, some rugged Schwalbe G-One tires and
+            Shimano Hydraulic disc brakes give you a rig that will let you get your adventure on, no matter what. Find
+            yourself, get lost."</i> - Scott Bikes.
         </p>
-        <a href="https://www.scott-sports.com/us/en/product/scott-addict-gravel-20-bike?article=274775022">Full Specification is available here.</a>
+        <a href="https://www.scott-sports.com/us/en/product/scott-addict-gravel-20-bike?article=274775022">Full
+          Specification is available here.</a>
       </div>
       <br>
       <div>
@@ -730,20 +715,24 @@ if($_POST["submit"]) {
       <h1 class="w3-xxxlarge w3-text-red"><b>Build Your Tour</b></h1>
       <hr style="width:50px;border:5px solid red" class="w3-round">
       <p>Let us know how we can bring your dream tour into existence.</p>
-      <form method="post" action="contact.php" target="_blank">
+      <form action="https://formspree.io/Svein@tuftsadventuretours.com" method="POST">
         <div class="w3-section">
-          <label>Name</label>
-          <input class="w3-input w3-border" type="text" name="Name" required>
+          <label>Your Name
+            <input class="w3-input w3-border" type="text" name="name" required>
+          </label>
         </div>
         <div class="w3-section">
-          <label>Email</label>
-          <input class="w3-input w3-border" type="text" name="Email" required>
+          <label>Your Email:
+            <input class="w3-input w3-border" type="email" name="email" required>
+          </label>
         </div>
         <div class="w3-section">
-          <label>Message</label>
-          <input class="w3-input w3-border" type="text" name="Message" required>
+          <label>Message
+            <textarea class="w3-input w3-border" type="text" name="message" required></textarea>
+          </label>
         </div>
-        <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
+        <button type="submit" value="Send Message"
+          class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom submit">Send Message</button>
       </form>
     </div>
 
@@ -755,10 +744,10 @@ if($_POST["submit"]) {
   <!-- <p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
         class="w3-hover-opacity"></a></p> -->
 
-         <!-- Contact -->
+  <!-- Contact -->
 
-         <!-- Watch https://www.youtube.com/watch?v=eg4e-FObyJ8 to finish this form -->
-  <div class="w3-container" id="contact" style="margin-top:75px">
+  <!-- Watch https://www.youtube.com/watch?v=eg4e-FObyJ8 to finish this form -->
+  <!-- <div class="w3-container" id="contact" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
@@ -777,7 +766,7 @@ if($_POST["submit"]) {
       </div>
       <button type="submit" class=" submit w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
     </form>  
-  </div>
+  </div> -->
 
   <footer>
     <p>
